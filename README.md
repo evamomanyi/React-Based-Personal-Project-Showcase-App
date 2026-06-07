@@ -74,13 +74,13 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/coffee-r-us-admin-portal.git
+git clone git@github.com:evamomanyi/React-Based-Personal-Project-Showcase-App.git
 ```
 
 Navigate into the project directory:
 
 ```bash
-cd coffee-r-us-admin-portal
+cd React-Based-Personal-Project-Showcase-App
 ```
 
 Install dependencies:
