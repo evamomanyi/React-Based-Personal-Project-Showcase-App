@@ -97,3 +97,6 @@ App
     ├── ProductForm
     └── ProductEdit
 
+# How to access
+
+Run https://react-based-personal-project-showcase.netlify.app/ to run this application
