@@ -1,16 +1,99 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Coffee R Us Admin Portal
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Coffee R Us Admin Portal is a React Single Page Application that allows administrators to:
 
-## React Compiler
+- View products
+- Search products
+- Add products
+- Update product prices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+- React
+- React Router
+- JSON Server
+- Vitest
+- React Testing Library
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+```bash
+npm install
+
+
+## Features
+
+- React Router Navigation
+- Dynamic Product Search
+- Add Products
+- Edit Product Pricing
+- JSON Server Backend
+- Custom Hook
+- Context API
+
+## Installation
+
+npm install
+
+## Start Frontend
+
+npm run dev
+
+## Start Backend
+
+npm run server
+
+## Run Tests
+
+npm test
+
+# Project Structure
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── ProductCard.jsx
+│   ├── ProductForm.jsx
+│   ├── ProductSearch.jsx
+│   └── ProductEdit.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Shop.jsx
+│   └── AdminPortal.jsx
+│
+├── hooks/
+│   └── useProducts.js
+│
+├── context/
+│   └── ProductContext.jsx
+│
+├── services/
+│   └── api.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+
+
+# Component Tree
+App
+│
+├── Navbar
+│
+├── Home
+│   └── Hero
+│
+├── Shop
+│   ├── ProductSearch
+│   └── ProductCard
+│
+└── AdminPortal
+    ├── ProductForm
+    └── ProductEdit
+
