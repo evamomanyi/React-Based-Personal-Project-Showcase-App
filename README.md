@@ -1,65 +1,49 @@
-
 # Coffee R Us Admin Portal
 
 ## Overview
 
-Coffee R Us Admin Portal is a React Single Page Application that allows administrators to:
+Coffee R Us Admin Portal is a React-based Single Page Application (SPA) developed to help administrators manage coffee products for an e-commerce platform. The application allows users to view products, search products, add new coffee products, and update product pricing through a simulated backend using JSON Server.
 
-- View products
-- Search products
-- Add products
-- Update product prices
-
-## Technologies
-
-- React
-- React Router
-- JSON Server
-- Vitest
-- React Testing Library
-- Vite
-
-## Installation
-
-```bash
-npm install
-
+---
 
 ## Features
 
-- React Router Navigation
-- Dynamic Product Search
-- Add Products
-- Edit Product Pricing
-- JSON Server Backend
-- Custom Hook
-- Context API
+* React Router Navigation
+* Home Page with Company Information
+* Shop Page with Product Listings
+* Product Search Functionality
+* Add New Coffee Products
+* Update Existing Product Prices
+* JSON Server Backend Simulation
+* Responsive Design
+* Unit Testing with Vitest and React Testing Library
 
-## Installation
+---
 
-npm install
+## Technologies Used
 
-## Start Frontend
+* React
+* React Router DOM
+* Vite
+* JavaScript (ES6+)
+* CSS3
+* JSON Server
+* Vitest
+* React Testing Library
 
-npm run dev
+---
 
-## Start Backend
+## Project Structure
 
-npm run server
-
-## Run Tests
-
-npm test
-
-# Project Structure
+```text
 src/
 │
 ├── components/
 │   ├── Navbar.jsx
 │   ├── Hero.jsx
 │   ├── ProductCard.jsx
-│   ├── ProductForm.jsx
 │   ├── ProductSearch.jsx
+│   ├── ProductForm.jsx
 │   └── ProductEdit.jsx
 │
 ├── pages/
@@ -76,29 +60,161 @@ src/
 ├── services/
 │   └── api.js
 │
+├── tests/
+│
 ├── App.jsx
 ├── main.jsx
 └── index.css
+```
 
+---
 
-# Component Tree
-App
-│
-├── Navbar
-│
-├── Home
-│   └── Hero
-│
-├── Shop
-│   ├── ProductSearch
-│   └── ProductCard
-│
-└── AdminPortal
-    ├── ProductForm
-    └── ProductEdit
+## Installation
 
+Clone the repository:
 
+```bash
+git clone https://github.com/YOUR_USERNAME/coffee-r-us-admin-portal.git
+```
 
-## How to access
+Navigate into the project directory:
+
+```bash
+cd coffee-r-us-admin-portal
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Running the Application
+
+## Published at Netlify
 
 Run "https://react-based-personal-project-showcase.netlify.app/" to run this application
+
+### Start the React Frontend
+
+```bash
+npm run dev
+```
+
+### Start the JSON Server Backend
+
+```bash
+npm run server
+```
+
+The API will be available at:
+
+```text
+http://localhost:3001/products
+```
+
+---
+
+## Running Tests
+
+```bash
+npm test
+```
+
+---
+
+## API Endpoints
+
+### Get Products
+
+```http
+GET /products
+```
+
+### Add Product
+
+```http
+POST /products
+```
+
+### Update Product
+
+```http
+PATCH /products/:id
+```
+
+---
+
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home-page.png)
+
+### Shop Page
+
+![Shop Page](screenshots/shop-page.png)
+
+### Admin Portal
+
+![Admin Portal](screenshots/admin-page.png)
+
+---
+
+## Application Pages
+
+### Home Page
+
+Displays company information and introduces the Coffee R Us platform.
+
+### Shop Page
+
+Displays all available coffee products and provides search functionality.
+
+### Admin Portal
+
+Allows administrators to add new coffee products and update product pricing.
+
+---
+
+## React Concepts Demonstrated
+
+* useState
+* useEffect
+* useRef
+* useId
+* useContext
+* Custom Hooks
+* React Router
+* Component-Based Architecture
+* API Integration
+
+---
+
+## Future Improvements
+
+* Product deletion functionality
+* Authentication and authorization
+* Product image uploads
+* Cloud-hosted backend integration
+* Product inventory management
+* Analytics dashboard
+
+---
+
+## Known Limitations
+
+* JSON Server must be running locally for CRUD operations.
+* Data persistence is limited to the local JSON database.
+* GitHub Pages deployment supports the frontend only; JSON Server is not deployed. As such, Netlify has been used to publish this project
+
+---
+
+## Author
+
+Evanjeline Momanyi
+
+---
+
