@@ -7,7 +7,7 @@ import ProductEdit from "../components/ProductEdit";
 function Shop() {
   const [products] =
     useProducts();
-
+console.log(products);
   const [searchTerm,
     setSearchTerm] =
     useState("");

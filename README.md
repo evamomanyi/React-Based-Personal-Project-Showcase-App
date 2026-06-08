@@ -69,6 +69,14 @@ src/
 
 ---
 
+## Running the Application
+
+## Published at Netlify
+
+Run "https://react-based-personal-project-showcase.netlify.app/" to run this application
+
+## Running the Application
+
 ## Installation
 
 Clone the repository:
@@ -89,21 +97,129 @@ Install dependencies:
 npm install
 ```
 
----
+This project consists of two parts:
 
-## Running the Application
+1. React Frontend (Vite)
+2. JSON Server Backend
 
-## Published at Netlify
+Both services must be running simultaneously for the application to function correctly.
 
-Run "https://react-based-personal-project-showcase.netlify.app/" to run this application
 
-### Start the React Frontend
+```
+
+# Start JSON Server
+
+Open a new terminal window and navigate to the project root.
+
+Run:
+
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+You should see:
+
+```text
+JSON Server started on PORT :3001
+```
+
+Verify the API is running by visiting:
+
+```text
+http://localhost:3001/products
+```
+
+A JSON response containing product data should be displayed.
+
+# Start the React Application
+
+Open another terminal window and navigate to the project root.
+
+Run:
 
 ```bash
 npm run dev
 ```
 
-### Start the JSON Server Backend
+You should see output similar to:
+
+```text
+VITE v7.x.x ready
+
+Local: http://localhost:5173/
+```
+
+# Open the Application
+
+Open your browser and navigate to:
+
+```text
+http://localhost:5173
+```
+
+The Coffee R Us application should load successfully.
+
+### Important Note
+
+The Shop page retrieves product data from JSON Server using:
+
+```javascript
+http://localhost:3001/products
+```
+
+If JSON Server is not running:
+
+* Products will not load
+* The Shop page will appear empty
+* Browser console errors similar to the following may appear:
+
+```text
+Cross-Origin Request Blocked
+NetworkError when attempting to fetch resource
+```
+
+Always ensure JSON Server is running before starting the React application.
+
+### Running Both Services Simultaneously
+
+Terminal 1:
+
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+Terminal 2:
+
+```bash
+npm run dev
+```
+
+### Verifying Everything Is Working
+
+Check the following URLs:
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+Backend API:
+
+```text
+http://localhost:3001/products
+```
+
+If both URLs are accessible, the application is configured correctly.
+
+
+# Start the React Frontend
+
+```bash
+npm run dev
+```
+
+# Start the JSON Server Backend
 
 ```bash
 npm run server
@@ -144,24 +260,6 @@ POST /products
 ```http
 PATCH /products/:id
 ```
-
----
-
-## Screenshots
-
-### Home Page
-
-![Home Page](screenshots/home-page.png)
-
-### Shop Page
-
-![Shop Page](screenshots/shop-page.png)
-
-### Admin Portal
-
-![Admin Portal](screenshots/admin-page.png)
-
----
 
 ## Application Pages
 
@@ -208,13 +306,4 @@ Allows administrators to add new coffee products and update product pricing.
 
 * JSON Server must be running locally for CRUD operations.
 * Data persistence is limited to the local JSON database.
-* GitHub Pages deployment supports the frontend only; JSON Server is not deployed. As such, Netlify has been used to publish this project
-
----
-
-## Author
-
-Evanjeline Momanyi
-
----
 
